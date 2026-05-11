@@ -1,0 +1,17 @@
+# Virtual Environment
+venv/
+.env
+
+# Python internals
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Market Data Vault (Ignore all local data)
+data/
+
+# OS/Editor specific
+.DS_Store
+.vscode/
+.idea/
