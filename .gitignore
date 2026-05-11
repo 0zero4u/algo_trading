@@ -10,8 +10,3 @@ __pycache__/
 
 # Market Data Vault (Ignore all local data)
 data/
-
-# OS/Editor specific
-.DS_Store
-.vscode/
-.idea/
