@@ -10,3 +10,4 @@ __pycache__/
 
 # Market Data Vault (Ignore all local data)
 data/
+.aider*
