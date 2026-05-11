@@ -11,3 +11,18 @@ __pycache__/
 # Market Data Vault (Ignore all local data)
 data/
 .aider*
+
+# Log files
+*.log
+logs/
+log/
+
+# IDE / Editor specific
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific
+.DS_Store
+Thumbs.db
