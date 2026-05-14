@@ -1,5 +1,5 @@
 # ==========================================
-# COLAB CELL 1: THE GLOBAL CONTRACT (1.py)
+# COLAB CELL 1: THE GLOBAL CONTRACT (001.py)
 # ==========================================
 from ml4t.specs import (
     MarketDataSchema,
@@ -12,7 +12,7 @@ from ml4t.specs import (
 def build_and_save_contract():
     print("--- Generating ML4T Global Contract ---")
 
-    # 1. Define the Spec (The Physical Baseline)
+    # 1. Define the Spec (Taking advantage of ML4T defaults!)
     spec = MarketDataSpec(
         artifact_id="solusdt_dollar_bars_v1",
 
@@ -24,8 +24,7 @@ def build_and_save_contract():
         ),
 
         # Define the column rules.
-        # This represents physical reality. It must be "close".
-        # We will dynamically override this to "synthetic_price" later during TDM labeling.
+        # (timestamp and close are defaults, but we explicitly set entity_col)
         schema=MarketDataSchema(
             timestamp_col="timestamp",
             entity_col="asset_id",            # Matches your 2.6.py script
@@ -47,5 +46,5 @@ def build_and_save_contract():
 
     print(f"✅ Global Contract successfully saved to: {contract_path}")
 
-# Run the contract generation
+# Run it
 build_and_save_contract()
